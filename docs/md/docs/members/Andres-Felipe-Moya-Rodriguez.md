@@ -15,5 +15,5 @@ https://es.wikipedia.org/wiki/Problema_de_Simon
 
 ## Hobbies
 
-Movies, TV shows and videogames.
+Movies, TV shows, videogames and music.
 > :ToCPrevNext
