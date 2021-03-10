@@ -20,4 +20,4 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+> [Andres Felipe Moya Rodríguez](/docs/members/Andres-Felipe-Moya-Rodriguez)
