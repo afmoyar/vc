@@ -36,7 +36,10 @@ Escala de grises
 >      let g = green(pixels[i]);
 >      let b = blue(pixels[i]);
 >      let gray = (r+b+g)/3;
->      pixels[i] = color(gray, gray, gray);
+>      let grayColor = color(gray, gray, gray);
+>      pixels[i] = red(grayColor);
+>      pixels[i + 1] = green(grayColor);
+>      pixels[i + 2] = blue(grayColor);
 >    }
 >   updatePixels();
 > }
@@ -60,7 +63,10 @@ Negativa
 >      let r = red(pixels[i]);
 >      let g = green(pixels[i]);
 >      let b = blue(pixels[i]);
->      pixels[i] = color(255 - r, 255 - g, 255 - b);
+>      let negative = color(255 - r, 255 - g, 255 - b);
+>      pixels[i] = red(negative);
+>      pixels[i + 1] = green(negative);
+>      pixels[i + 2] = blue(negative);
 >    }
 >   updatePixels();
 > }
