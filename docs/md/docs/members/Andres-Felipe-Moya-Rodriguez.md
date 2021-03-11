@@ -18,13 +18,13 @@ https://es.wikipedia.org/wiki/Problema_de_Simon
 Movies, TV shows, videogames and music.
 
 
-> :P5 width=512, height=512
+> :P5 width=350, height=450
 >
 > function setup() {
 >    
->   loadImage('/vc/docs/sketches/lenna.png', img => {
->   createCanvas(512, 512);
->   image(img, 0, 0);
+>   loadImage('/vc/docs/sketches/movie.jpg', img => {
+>   createCanvas(350, 450);
+>   image(img, 0, 0,350,450);
 > });
 > }
 
