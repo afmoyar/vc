@@ -18,5 +18,6 @@ https://es.wikipedia.org/wiki/Problema_de_Simon
 Movies, TV shows, videogames and music.
 
 
-> :P5 sketch=/docs/sketches/movie.js
+> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/movie.js, width=512, height=512
+
 > :ToCPrevNext
