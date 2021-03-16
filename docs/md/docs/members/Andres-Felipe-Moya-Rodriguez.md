@@ -1,21 +1,21 @@
 # Andres Felipe Moya Rodríguez
 
 ## Bio
-Born in Bogota, Colombia.
-Computer Engineering student at Universidad Nacional de Colombia.
+Nacido en Bogotá, Colombia.
+Estudiante de ingeniería de sistemas y computación en la Universidad Nacional de Colombia.
 
 ## Interests
 
-Software development, data structures, deep learning.
+Desarrollo de software, estructuras de datos, deep learning.
 
 ## Contributions
 
-*Simon's problem*: Special case of the Hidden Subgroup problem. It can be solved with the help of quantum algorithms. 
+*Problema de Simon*: Caso especial del problema del subgrupo oculto. Puede ser resuelto con la ayuda de algoritmos cuánticos.
 https://es.wikipedia.org/wiki/Problema_de_Simon
 
 ## Hobbies
 
-Movies, TV shows, videogames and music.
+Películas, series de televisión, música y videojuegos.
 
 Escala de grises
 
