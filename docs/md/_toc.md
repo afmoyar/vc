@@ -1,6 +1,6 @@
 [Home](/)
 
-> :Collapse label=Shaders
+> :Collapse label=Workshops
 > 
 > [Imaging & Video](/docs/workshops/imaging)
 > [Rendering](/docs/workshops/rendering)
@@ -20,4 +20,4 @@
 
 > :Collapse label=Members
 > 
-> [Andres Felipe Moya Rodríguez](/docs/members/Andres-Felipe-Moya-Rodriguez)
+> [Hubert Alejandro Tovar Strubinger](/docs/members/Hubert-Alejandro-Tovar-Strubinger)
