@@ -89,6 +89,8 @@ Imagen original
 
 ## Ilusión
 
+En 1904, Mary Everest Boole (matemática inglesa) inventó las curvas de costura, una forma de arte donde se "crean" curvas planas a través de líneas rectas. Este fenómeno de crear una aparente curvatura ocurre gracias al hecho que una curva se puede aproximar mediante el trazo de una cantidad finita de tangentes a la misma.
+
 > :P5 width=400, height=400
 >
 >function setup() {
