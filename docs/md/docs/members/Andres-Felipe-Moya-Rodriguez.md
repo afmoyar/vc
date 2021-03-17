@@ -17,79 +17,10 @@ https://es.wikipedia.org/wiki/Problema_de_Simon
 
 Películas, series de televisión, música y videojuegos.
 
-Escala de grises
-
-> :P5 width=350, height=450
->
-> let img;
-> function preload(){
->   img = loadImage('/vc/docs/sketches/movie.jpg');   
->}
-> function setup() {
->   createCanvas(350, 450);
->   image(img, 0, 0,width,height);
->   let d = pixelDensity();
->   loadPixels();
->   let numPixels = 8 * (width * d) * (height / 2 * d);
->   for (let i = 0; i < numPixels; i += 4) {
->      let r = red(pixels[i]);
->      let g = green(pixels[i]);
->      let b = blue(pixels[i]);
->      let gray = (r+b+g)/3;
->      let grayColor = color(gray, gray, gray);
->      pixels[i] = red(grayColor);
->      pixels[i + 1] = green(grayColor);
->      pixels[i + 2] = blue(grayColor);
->    }
->   updatePixels();
-> }
-
-Negativa
-
-> :P5 width=350, height=450
->
-> let img;
-> function preload(){
->   img = loadImage('/vc/docs/sketches/movie.jpg');   
->}
-> function setup() {
->   createCanvas(350, 450);
->   image(img, 0, 0,width,height);
->   let d = pixelDensity();
->   loadPixels();
->   let numPixels = 8 * (width * d) * (height / 2 * d);
->   for (let i = 0; i < numPixels; i += 4) {
->      //pixels[i] = red(pink);
->      let r = red(pixels[i]);
->      let g = green(pixels[i]);
->      let b = blue(pixels[i]);
->      let negative = color(255 - r, 255 - g, 255 - b);
->      pixels[i] = red(negative);
->      pixels[i + 1] = green(negative);
->      pixels[i + 2] = blue(negative);
->    }
->   updatePixels();
-> }
-
-
-
-
-Imagen original
-
-> :P5 width=350, height=450
->
-> let img;
-> function preload(){
->   img = loadImage('/vc/docs/sketches/movie.jpg');   
->}
-> function setup() {
->   createCanvas(350, 450);
->   image(img, 0, 0,width,height);
-> }
 
 ## Ilusión
 
-En 1904, Mary Everest Boole (matemática inglesa) inventó las curvas de costura, una forma de arte donde se "crean" curvas planas a través de líneas rectas. Este fenómeno de crear una aparente curvatura ocurre gracias al hecho que una curva se puede aproximar mediante el trazo de una cantidad finita de tangentes a la misma.
+En 1904, Mary Everest Boole (matemática inglesa) inventó las ***Curve stitching*** (curva de costura), una forma de arte donde se "crean" líneas curvas a través de líneas rectas. Este fenómeno de crear una aparente curvatura ocurre gracias al hecho que una curva se puede aproximar mediante el trazo de una cantidad finita de tangentes a la misma.
 
 > :P5 width=400, height=400
 >
