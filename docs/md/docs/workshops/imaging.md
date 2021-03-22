@@ -1,6 +1,6 @@
 # Image and video processing
 
-Imagen original
+Gama de grises
 
 > :P5 width=350, height=450
 >
@@ -13,8 +13,6 @@ Imagen original
 >   image(img, 0, 0,width,height);
 > }
 
-
-Gama de grises
 
 > :P5 width=350, height=450
 >
@@ -79,8 +77,8 @@ Arte ascci
 >  
 >  let i = 0;
 >  
->  for (let y = 0; y < height; y += 4) {
->    for (let x = 0; x < width; x += 4) {
+>  for (let y = 0; y < height; y += 8) {
+>    for (let x = 0; x < width; x += 8) {
 >      let pixel = img.pixels[(y * img.width + x)];
 >      let r = red(pixel);
 >      let g = green(pixel);
@@ -91,11 +89,9 @@ Arte ascci
 >  }
 >  
 >  total = total / i;
->   let pixelIndex = 0;
 >  for (let y = 0; y < height; y += 2) {
 >    for (let x = 0; x < width; x += 2) {
->      let pixel = img.pixels[pixelIndex];
->        pixelIndex+=16;
+>        let pixel = img.pixels[4*(y * img.width + x)];
 >        let r = red(pixel);
 >        let g = green(pixel);
 >        let b = blue(pixel);
