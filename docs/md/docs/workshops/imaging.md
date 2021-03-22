@@ -5,7 +5,6 @@ Imagen original
 > :P5 width=350, height=450
 >
 > let img;
-> let img2
 > function preload(){
 >   img = loadImage('/vc/docs/sketches/Stormlight.jpg');
 >}
@@ -45,28 +44,44 @@ Gama de grises
 
 
 
-Arte ascci
+Arte ascci 
+
 
 > :P5 width=350, height=450
 >
 > let img;
-> let total = 0;
 > function preload(){
->   img = loadImage('/vc/docs/sketches/Stormlight.jpg');
+>   img = loadImage('/vc/docs/sketches/tree.jpg');
 >}
 > function setup() {
 >   createCanvas(350, 450);
->   img.filter(GRAY);
 >   image(img, 0, 0,width,height);
->   loadPixels();
+> }
+
+
+> :P5 width=350, height=450 
+>
+>let img;
+>let total = 0;
 >
 >
->   let i = 0;
->   let d = pixelDensity();
->   let numPixels = 8 * (width * d) * (height / 2 * d);
+>function preload() {
+> img = loadImage('/vc/docs/sketches/tree.jpg');
+>}
+>function setup() {
+>  createCanvas(350,450);
+>  background(255);
+>  fill(0);
+>  textFont("Courier", 10);
+>  img.resize(350,450);
+>  img.filter(GRAY);
+>  img.loadPixels();
+>  
+>  let i = 0;
+>  
 >  for (let y = 0; y < height; y += 10) {
 >    for (let x = 0; x < width; x += 10) {
->      let pixel = pixels[y * width + x];
+>      let pixel = img.pixels[y * img.width + x];
 >      let r = red(pixel);
 >      let g = green(pixel);
 >      let b = blue(pixel);
@@ -74,10 +89,12 @@ Arte ascci
 >      i++;
 >    }
 >  }
+>  
 >  total = total / i;
->  for (let y = 0; y < height; y += 8) {
->    for (let x = 0; x < width; x += 8) {
->        let pixel = pixels[y * width + x];
+> 
+>  for (let y = 0; y < height; y += 2) {
+>    for (let x = 0; x < width; x += 2) {
+>      let pixel = img.pixels[y * img.width + x];
 >        let r = red(pixel);
 >        let g = green(pixel);
 >        let b = blue(pixel);
@@ -109,20 +126,12 @@ Arte ascci
 >        }
 >    }
 >  }
-> }
+>}
 
 
 
-> :P5 width=350, height=450
->
-> function setup() {
->   createCanvas(350, 450);
->  for (let y = 0; y < height; y += 8) {
->    for (let x = 0; x < width; x += 8) {
->       text(".", x, y);
->    }
->  }
-> }
+
+
 
 
 
