@@ -59,7 +59,7 @@ Arte ascci
 > }
 
 
-> :P5 width=350, height=450 
+> :P5 width=350, height=450
 >
 >let img;
 >let total = 0;
@@ -72,16 +72,16 @@ Arte ascci
 >  createCanvas(350,450);
 >  background(255);
 >  fill(0);
->  textFont("Courier", 10);
->  img.resize(350,450);
+>  textFont("Courier", 6);
+>  img.resize(width,height);
 >  img.filter(GRAY);
 >  img.loadPixels();
 >  
 >  let i = 0;
 >  
->  for (let y = 0; y < height; y += 10) {
->    for (let x = 0; x < width; x += 10) {
->      let pixel = img.pixels[y * img.width + x];
+>  for (let y = 0; y < height; y += 4) {
+>    for (let x = 0; x < width; x += 4) {
+>      let pixel = img.pixels[(y * img.width + x)];
 >      let r = red(pixel);
 >      let g = green(pixel);
 >      let b = blue(pixel);
@@ -91,10 +91,11 @@ Arte ascci
 >  }
 >  
 >  total = total / i;
-> 
+>   let pixelIndex = 0;
 >  for (let y = 0; y < height; y += 2) {
 >    for (let x = 0; x < width; x += 2) {
->      let pixel = img.pixels[y * img.width + x];
+>      let pixel = img.pixels[pixelIndex];
+>        pixelIndex+=16;
 >        let r = red(pixel);
 >        let g = green(pixel);
 >        let b = blue(pixel);
