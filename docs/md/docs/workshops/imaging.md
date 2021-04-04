@@ -40,6 +40,49 @@ Gama de grises
 >   updatePixels();
 > }
 
+Gama de grises en video
+
+> :P5 width=350, height=250
+>
+>let vid;
+>function setup() {
+>  noCanvas();
+>
+>  vid = createVideo(
+>    ['/vc/docs/sketches/youWinTheInternet.mp4'],
+>    vidLoad
+>  );
+>
+>  vid.size(350, 250);
+>}
+>
+>// This function is called when the video loads
+>function vidLoad() {
+>  vid.loop();
+>  vid.volume(0);
+>}
+
+
+> :P5 width=350, height=250
+>
+>let vid;
+>
+>function setup() {
+>  createCanvas(350, 250);
+>  // specify multiple formats for different browsers
+>  vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+>  vid.hide();
+>  vid.loop();
+>}
+>
+>function draw() {
+>  background(0);
+>  image(vid, 0, 0,350, 250); // draw the video frame to canvas
+>  filter(GRAY);
+>}
+>
+
+
 
 
 Arte ascci 
