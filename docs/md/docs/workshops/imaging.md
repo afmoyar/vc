@@ -65,19 +65,19 @@ Gama de grises en video
 
 > :P5 width=350, height=250
 >
->let fingers;
+>let vid;
 >
 >function setup() {
 >  createCanvas(350, 250);
 >  // specify multiple formats for different browsers
->  fingers = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
->  fingers.hide();
->  fingers.loop();
+>  vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+>  vid.hide();
+>  vid.loop();
 >}
 >
 >function draw() {
 >  background(0);
->  image(fingers, 0, 0,350, 250); // draw the video frame to canvas
+>  image(vid, 0, 0,350, 250); // draw the video frame to canvas
 >  filter(GRAY);
 >}
 >
