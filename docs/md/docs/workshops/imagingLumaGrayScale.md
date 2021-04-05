@@ -101,15 +101,20 @@
 >function draw() {
 >  background(255);
 >  vid.loadPixels();
->  const stepSize = round(constrain(mouseX / 8, 6, 32));
->  for (let y = 0; y < height; y += stepSize) {
->    for (let x = 0; x < width; x += stepSize) {
->      const i = y * width + x;
->      const darkness = (255 - vid.pixels[i * 4]) / 255;
->      const radius = stepSize * darkness;
->      ellipse(x, y, radius, radius);
+>  for (let y = 0; y < height; y++) {
+>    for (let x = 0; x < width; x++) {
+>       let index = 4 * (x + vid.width * y);
+>       let r = vid.pixels[index];
+>       let g = vid.pixels[index + 1];
+>       let b = vid.pixels[index + 2];
+>      let y = r *0.299 + g *0.587 + b *0.0114;
+>      let grayColor = color(y, y, y);
+>      vid.pixels[index] = red(grayColor);
+>      vid.pixels[index + 1] = green(grayColor);
+>      vid.pixels[index + 2] = blue(grayColor);
 >    }
 >  }
+>  vid.updatePixels();
 >}
 
 >:ToCPrevNext
