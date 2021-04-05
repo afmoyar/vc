@@ -3,6 +3,11 @@
 > :Collapse label=Workshops
 > 
 > [Imaging & Video](/docs/workshops/imaging)
+> [Imaging RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
+> [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+> [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
+> [Imaging ASCII](/docs/workshops/imagingASCII)
+> [Imaging Mosaico](/docs/workshops/imagingMosaico)
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
