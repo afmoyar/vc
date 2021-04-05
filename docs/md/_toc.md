@@ -5,6 +5,7 @@
 > [Imaging & Video](/docs/workshops/imaging)
 > [Imaging RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
 > [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+> [Imaging Negative](/docs/workshops/imagingNegative)
 > [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
 > [Imaging ASCII](/docs/workshops/imagingASCII)
 > [Imaging Mosaico](/docs/workshops/imagingMosaico)
