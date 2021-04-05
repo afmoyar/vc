@@ -1,5 +1,12 @@
 # Image and video processing
 
+A pesar de que el método del promedio rgb produce una escala de grises convincente, no se apega a la manera en que el ojo humano procesa los colores, de hecho, el ojo prioriza unos colores sobre otros, por lo tanto, se busca desarrollar una escala de grises que priorice los colores de una forma similar.
+
+Para ello se usa un promedio ponderado de los valores rgb de cada pixel:
+
+<center>r*0.299 + g*0.587 + b*0.0114</center>
+
+
 ### Usando Luma
 
 > :P5 width=350, height=450

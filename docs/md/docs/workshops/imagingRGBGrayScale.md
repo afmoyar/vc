@@ -2,6 +2,10 @@
 
 ## Gama de grises
 
+Para esta sección se desarrolló un programa que genera la gama de grises de una imagen calculando el promedio de los valores de rojo, verde y azul para cada pixel; posteriormente se reemplaza cada valor rgb por dicho promedio.
+ 
+p5js también posee una función diseñada para obtener este mismo resultado, la cual fue empleada para obtener la escala de grises de un video.
+
 ### Usando Promedio RGB
 
 > :P5 width=350, height=450

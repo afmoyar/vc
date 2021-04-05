@@ -1,5 +1,7 @@
 # Image and video processing
 
+Para esta sección se desarrolló un programa que, basado en la escala de grises de una imagen, calcula el nivel de intensidad de cada pixel, y basado en ello dibuja en el lienzo un caracter ASCII con un nivel de intensidad similar (de forma intuitiva se entiende que un caracter como "@" tiene más intensidad que otro como ".")
+
 ## Arte ASCII
 
 
