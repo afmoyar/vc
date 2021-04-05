@@ -765,4 +765,6 @@ Detección de bordes
 >    btotal = constrain(btotal, 0, 255);
 >    return color(rtotal, gtotal, btotal);
 >}
+>
+
 > :ToCPrevNext
