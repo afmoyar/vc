@@ -651,13 +651,13 @@ identidad
 >function setup() {
 >    createCanvas(350, 250);
 >    vid.hide();
->    vid.loop();
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
 >
 >function draw() {   
 >    vid.loadPixels();
+>    image(vid, 0, 0, 350, 250);
 >    loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
 >        for (let y = 1; y < vid.height; y++) {
@@ -725,7 +725,9 @@ Detección de bordes
 >}
 >
 >function draw() {
+>    vid.loop();
 >    background(0);
+>    image(vid, 0, 0, 350, 250);
 >    loadPixels();
 >    for (let x = 0; x < width; x++) {
 >        for (let y = 0; y < height; y++) {
