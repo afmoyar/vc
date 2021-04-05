@@ -108,10 +108,6 @@
 >       let g = vid.pixels[index + 1];
 >       let b = vid.pixels[index + 2];
 >      let y = r *0.299 + g *0.587 + b *0.0114;
->      let grayColor = color(y, y, y);
->      vid.pixels[index] = red(grayColor);
->      vid.pixels[index + 1] = green(grayColor);
->      vid.pixels[index + 2] = blue(grayColor);
 >    }
 >  }
 >  vid.updatePixels();
