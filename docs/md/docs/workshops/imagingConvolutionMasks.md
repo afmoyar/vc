@@ -709,13 +709,8 @@ Detección de bordes
 >    [-1, 0, 1]
 > ];
 >
-> function preload() {
->    vid =  createVideo('/vc/docs/sketches/flower.mp4');
->    vid.size(350,250);
->    vid.volume(0);
->}
->
 >function setup() {
+>    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
 >    createCanvas(350, 250);
 >    vid.loop();
 >    vid.hide();
@@ -724,6 +719,8 @@ Detección de bordes
 >}
 >
 >function draw() {
+>    background(0);
+>    image(vid, 0, 0, 350, 250);
 >    loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
 >        for (let y = 1; y < vid.height; y++) {
