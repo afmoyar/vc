@@ -90,10 +90,10 @@
 > let vid;
 >
 > function setup() {
->    createCanvas(350, 250);
->    vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
->    vid.loop();
->    vid.hide();
+>   createCanvas(350, 250);
+>   vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+>   vid.hide();
+>   vid.loop();
 >}
 >
 > function draw() {
@@ -109,9 +109,9 @@
 >       let b = pixels[index + 2];
 >       let gamma = r * 0.299 + g * 0.587 + b * 0.0114;
 >       let grayColor = color(gamma, gamma, gamma);
->       pixels[index] = red(grayColor);
->       pixels[index + 1] = green(grayColor);
->       pixels[index + 2] = blue(grayColor);
+>       pixels[index] = gamma;
+>       pixels[index + 1] = gamma;
+>       pixels[index + 2] = gamma;
 >      }
 >  }
 >  updatePixels();
