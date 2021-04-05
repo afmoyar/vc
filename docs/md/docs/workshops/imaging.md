@@ -1056,6 +1056,8 @@ Detección de bordes
 
 ## Conversión de la imagen a un foto-mosaico.
 
+Para esta sección se desarrolló un programa que con el uso de una base de datos local de imágenes con ciertos niveles de brillo o intensidad se permite componer una imagen especificada como un conjunto de las presentes en la base de datos, respetando los patrones de color de la imagen original y donde se puede especificar las dimensiones de las imágenes del mosaico.
+
 Conversión con una imagen pequeña (mosaico de imagenes 3x3):
 
 > :P5 width=350, height=450
