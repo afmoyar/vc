@@ -98,23 +98,18 @@
 >    fill(0);
 >}
 >
->function draw() {   
->   image(vid, 0, 0,350, 250); 
->    vid.loadPixels();
->    for (let x = 1; x < vid.width; x++) {
->        for (let y = 1; y < vid.height; y++) {
->            let index = 4 * (x + vid.width * y);
->            let r = pixels[index];
->            let g = pixels[index + 1];
->            let b = pixels[index + 2];
->            let y = r *0.299 + g *0.587 + b *0.0114;
->            let grayColor = color(y, y, y);
->            pixels[index] = red(grayColor);
->            pixels[index + 1] = green(grayColor);
->            pixels[index + 2] = blue(grayColor);
->       }
->   }
->   updatePixels();
-> }
+>function draw() {
+>  background(255);
+>  vid.loadPixels();
+>  const stepSize = round(constrain(mouseX / 8, 6, 32));
+>  for (let y = 0; y < height; y += stepSize) {
+>    for (let x = 0; x < width; x += stepSize) {
+>      const i = y * width + x;
+>      const darkness = (255 - fingers.pixels[i * 4]) / 255;
+>      const radius = stepSize * darkness;
+>      ellipse(x, y, radius, radius);
+>    }
+>  }
+>}
 
 >:ToCPrevNext
