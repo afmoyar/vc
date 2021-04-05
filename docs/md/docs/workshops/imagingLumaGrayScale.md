@@ -99,24 +99,24 @@
 >}
 >
 >function draw() {
->  background(255);
+> image(vid, 0, 0,350, 250);
 >  vid.loadPixels();
 >  const step = 1;
 >  for (let y = 0; y < height; y+= step) {
 >    for (let x = 0; x < width; x+= step) {
->       let index = 4 * (x + vid.width * y);
->       let r = vid.pixels[index];
->       let g = vid.pixels[index + 1];
->       let b = vid.pixels[index + 2];
->       let gamma = r * 0.299 + g * 0.587 + b * 0.0114;
->       let grayColor = color(gamma, gamma, gamma);
->       pixels[index] = red(grayColor);
->       pixels[index + 1] = green(grayColor);
->       pixels[index + 2] = blue(grayColor);
+>      let index = 4 * (x + vid.width * y);
+>      let r = vid.pixels[index];
+>      let g = vid.pixels[index + 1];
+>      let b = vid.pixels[index + 2];
+>      let gamma_1 = r * 0.299 + g * 0.587 + b * 0.0114;
+>      let grayColor = color(gamma_1, gamma_1, gamma_1);
+>      pixels[i] = red(grayColor);
+>      pixels[i + 1] = green(grayColor);
+>      pixels[i + 2] = blue(grayColor);
 >      }
 >  }
 >  vid.updatePixels();
->  image(vid, 0, 0,350, 250);
+>  
 >}
 
 >:ToCPrevNext
