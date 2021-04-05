@@ -99,6 +99,7 @@
 >}
 >
 >function draw() {   
+>   image(vid, 0, 0,350, 250); 
 >    vid.loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
 >        for (let y = 1; y < vid.height; y++) {
