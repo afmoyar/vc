@@ -94,11 +94,12 @@
 >    vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
 >    vid.hide();
 >    vid.loop();
+>    noStroke();
+>    fill(0);
 >}
 >
->function draw() {
->    image(vid, 0, 0,350, 250);    
->    loadPixels();
+>function draw() {   
+>    vid.loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
 >        for (let y = 1; y < vid.height; y++) {
 >            let index = 4 * (x + vid.width * y);
