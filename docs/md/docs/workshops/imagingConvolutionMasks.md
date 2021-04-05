@@ -699,9 +699,10 @@ identidad
 >}
 
 Detección de bordes
+
 > :P5 width=350, height=250
 >
->let vid;
+> let vid;
 >
 > let edgeDetection = [
 >    [1, 0, -1],
@@ -710,10 +711,10 @@ Detección de bordes
 > ];
 >
 >function setup() {
->    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
 >    createCanvas(350, 250);
->    vid.loop();
+>    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
 >    vid.hide();
+>    vid.loop();
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
@@ -722,8 +723,8 @@ Detección de bordes
 >    background(0);
 >    image(vid, 0, 0, 350, 250);
 >    loadPixels();
->    for (let x = 1; x < width; x++) {
->        for (let y = 1; y < height; y++) {
+>    for (let x = 0; x < width; x++) {
+>        for (let y = 0; y < height; y++) {
 >            let c = convolution(x, y, edgeDetection);
 >            let index = 4 * (x + width * y);
 >            pixels[index] = red(c);
