@@ -108,8 +108,8 @@
 >       let r = vid.pixels[index];
 >       let g = vid.pixels[index + 1];
 >       let b = vid.pixels[index + 2];
->       let y = r * 0.299 + g * 0.587 + b * 0.0114;
->       let grayColor = color(y, y, y);
+>       let gamma = r * 0.299 + g * 0.587 + b * 0.0114;
+>       let grayColor = color(gamma, gamma, gamma);
 >       pixels[index] = red(grayColor);
 >       pixels[index + 1] = green(grayColor);
 >       pixels[index + 2] = blue(grayColor);
