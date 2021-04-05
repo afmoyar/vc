@@ -115,6 +115,7 @@
 >    }
 >  }
 >  vid.updatePixels();
+>  image(vid, 0, 0,350, 250);
 >}
 
 >:ToCPrevNext
