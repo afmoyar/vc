@@ -120,8 +120,8 @@ Prueba con mayor tamaño de letra:
 >  }
 >  
 >  total = total / i;
->  for (let y = 0; y < height; y += 8) {
->    for (let x = 0; x < width; x += 8) {
+>  for (let y = 0; y < height; y += 7) {
+>    for (let x = 0; x < width; x += 7) {
 >        let pixel = img.pixels[4*(y * img.width + x)];
 >        let r = red(pixel);
 >        let g = green(pixel);
