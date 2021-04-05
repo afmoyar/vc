@@ -627,7 +627,6 @@ Mascara de desenfoque 5x5
 >}
 
 identidad 
-
 > :P5 width=350, height=250
 >
 >let vid;
@@ -637,9 +636,8 @@ identidad
 >    [0, 1, 0],
 >    [0, 0, 0]
 > ];
-> 
 > function preload() {
->    vid = createVideo(['/vc/docs/sketches/flower.mp4']);
+>    vid =  createVideo('/vc/docs/sketches/flower.mp4');
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
@@ -650,6 +648,7 @@ identidad
 >
 >function setup() {
 >    createCanvas(350, 250);
+>    vid =  createVideo('/vc/docs/sketches/flower.mp4'); 
 >    vid.hide();
 >    vid.size(350,250);
 >    vid.volume(0);
@@ -657,7 +656,6 @@ identidad
 >
 >function draw() {   
 >    vid.loadPixels();
->    image(vid, 0, 0, 350, 250);
 >    loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
 >        for (let y = 1; y < vid.height; y++) {
@@ -701,10 +699,9 @@ identidad
 >}
 
 Detección de bordes
-
 > :P5 width=350, height=250
 >
-> let vid;
+>let vid;
 >
 > let edgeDetection = [
 >    [1, 0, -1],
@@ -713,26 +710,25 @@ Detección de bordes
 > ];
 >
 > function preload() {
->    vid = createVideo(['/vc/docs/sketches/flower.mp4']);
+>    vid =  createVideo('/vc/docs/sketches/flower.mp4');
+>    vid.size(350,250);
+>    vid.volume(0);
 >}
 >
 >function setup() {
 >    createCanvas(350, 250);
->    vid.hide();
 >    vid.loop();
+>    vid.hide();
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
 >
 >function draw() {
->    vid.loop();
->    background(0);
->    image(vid, 0, 0, 350, 250);
 >    loadPixels();
->    for (let x = 0; x < width; x++) {
->        for (let y = 0; y < height; y++) {
+>    for (let x = 1; x < vid.width; x++) {
+>        for (let y = 1; y < vid.height; y++) {
 >            let c = convolution(x, y, edgeDetection);
->            let index = 4 * (x + width * y);
+>            let index = 4 * (x + vid.width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
 >            pixels[index + 2] = blue(c);
@@ -769,6 +765,5 @@ Detección de bordes
 >    btotal = constrain(btotal, 0, 255);
 >    return color(rtotal, gtotal, btotal);
 >}
->
 
 > :ToCPrevNext
