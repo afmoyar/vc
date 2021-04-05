@@ -637,7 +637,7 @@ identidad
 >    [0, 0, 0]
 > ];
 > function preload() {
->    vid =  createVideo('/vc/docs/sketches/flower.mp4');
+>    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
@@ -722,10 +722,10 @@ Detección de bordes
 >    background(0);
 >    image(vid, 0, 0, 350, 250);
 >    loadPixels();
->    for (let x = 1; x < vid.width; x++) {
->        for (let y = 1; y < vid.height; y++) {
+>    for (let x = 1; x < width; x++) {
+>        for (let y = 1; y < height; y++) {
 >            let c = convolution(x, y, edgeDetection);
->            let index = 4 * (x + vid.width * y);
+>            let index = 4 * (x + width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
 >            pixels[index + 2] = blue(c);
