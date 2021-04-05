@@ -627,6 +627,7 @@ Mascara de desenfoque 5x5
 >}
 
 identidad 
+
 > :P5 width=350, height=250
 >
 >let vid;
@@ -636,8 +637,9 @@ identidad
 >    [0, 1, 0],
 >    [0, 0, 0]
 > ];
+> 
 > function preload() {
->    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
+>    vid = createVideo(['/vc/docs/sketches/flower.mp4']);
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
@@ -648,8 +650,8 @@ identidad
 >
 >function setup() {
 >    createCanvas(350, 250);
->    vid =  createVideo('/vc/docs/sketches/flower.mp4'); 
 >    vid.hide();
+>    vid.loop();
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
@@ -710,9 +712,12 @@ Detección de bordes
 >    [-1, 0, 1]
 > ];
 >
+> function preload() {
+>    vid = createVideo(['/vc/docs/sketches/flower.mp4']);
+>}
+>
 >function setup() {
 >    createCanvas(350, 250);
->    vid =  createVideo(['/vc/docs/sketches/flower.mp4']);
 >    vid.hide();
 >    vid.loop();
 >    vid.size(350,250);
@@ -721,7 +726,6 @@ Detección de bordes
 >
 >function draw() {
 >    background(0);
->    image(vid, 0, 0, 350, 250);
 >    loadPixels();
 >    for (let x = 0; x < width; x++) {
 >        for (let y = 0; y < height; y++) {
