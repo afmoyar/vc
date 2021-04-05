@@ -24,6 +24,8 @@ Video Games, TV series, Movies...
 
 ## Optical illusion
 
+La siguiente ilusión se encuentra basada o relacionada con el tablero de ajedrez de Adelson, en esta se demuestra el efecto del entorno para la interpretación del color, donde un mismo color puede observarse con una tonalidad distinta de acuerdo si se encuentra en una región "iluminada" o en una región de "sombra".
+
 > :P5 width=777, height=437
 > 
 >  let numFrames = 36;  // The number of frames in the animation
