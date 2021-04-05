@@ -105,7 +105,7 @@
 >  for (let y = 0; y < height; y += stepSize) {
 >    for (let x = 0; x < width; x += stepSize) {
 >      const i = y * width + x;
->      const darkness = (255 - fingers.pixels[i * 4]) / 255;
+>      const darkness = (255 - vid.pixels[i * 4]) / 255;
 >      const radius = stepSize * darkness;
 >      ellipse(x, y, radius, radius);
 >    }
