@@ -6,8 +6,9 @@
 
 > :P5 width=350, height=250
 >
->let vid;
->function setup() {
+> let vid;
+>
+> function setup() {
 >  noCanvas();
 >
 >  vid = createVideo(
@@ -19,7 +20,7 @@
 >}
 >
 >// This function is called when the video loads
->function vidLoad() {
+> function vidLoad() {
 >  vid.loop();
 >  vid.volume(0);
 >}
@@ -42,16 +43,41 @@ identidad
 >   vidIdentidad.hide();
 >   vidIdentidad.loop();
 >   vidIdentidad.volume(0);
+>   vidIdentidad.size(350, 250);
 > }
 >
 > function draw() {   
 >   background(0);
 >   image(vidIdentidad, 0, 0, 350, 250);
 >   loadPixels();
->   for (let x = 1; x < vidIdentidad.width; x++) {
->       for (let y = 1; y < vidIdentidad.height; y++) {
->            let c = convolution(x, y, identity);
->            let index = 4 * (x + vidIdentidad.width * y);
+>   for (let x = 1; x < width; x++) {
+>       for (let y = 1; y < height; y++) {
+>         let rtotal = 0;
+>         let gtotal = 0;
+>         let btotal = 0;
+>         for (kx = -1; kx <= 1; kx++) {
+>            for (ky = -1; ky <= 1; ky++) {
+>               let xpos = x + kx;
+>               let ypos = y + ky;
+>               let r = 0;
+>               let g = 0;
+>               let b = 0;
+>               if ((xpos >= 0 && xpos < width) && (ypos >= 0 || ypos < height)) {
+>                   let index = 4 * (xpos + width * ypos);
+>                   r = pixels[index];
+>                   g = pixels[index + 1];
+>                   b = pixels[index + 2];
+>                 }
+>                rtotal += matrix[kx + 1][ky + 1] * r;
+>                gtotal += matrix[kx + 1][ky + 1] * g;
+>                btotal += matrix[kx + 1][ky + 1] * b;
+>              }
+>            }
+>            rtotal = constrain(rtotal, 0, 255);
+>            gtotal = constrain(gtotal, 0, 255);
+>            btotal = constrain(btotal, 0, 255);
+>            let c = color(rtotal, gtotal, btotal);
+>            let index = 4 * (x + width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
 >            pixels[index + 2] = blue(c);
@@ -61,33 +87,6 @@ identidad
 >    updatePixels();
 > }
 >
-> function convolution(x, y, matrix) {
->    let rtotal = 0;
->    let gtotal = 0;
->    let btotal = 0;
->    for (kx = -1; kx <= 1; kx++) {
->        for (ky = -1; ky <= 1; ky++) {
->            let xpos = x + kx;
->            let ypos = y + ky;
->            let r = 0;
->            let g = 0;
->            let b = 0;
->            if ((xpos >= 0 && xpos < vidIdentidad.width) && (ypos >= 0 || ypos < vidIdentidad.height)) {
->                let index = 4 * (xpos + vidIdentidad.width * ypos);
->                r = vidIdentidad.pixels[index];
->                g = vidIdentidad.pixels[index + 1];
->                b = vidIdentidad.pixels[index + 2];
->            }
->            rtotal += matrix[kx + 1][ky + 1] * r;
->            gtotal += matrix[kx + 1][ky + 1] * g;
->            btotal += matrix[kx + 1][ky + 1] * b;
->        }
->    }
->    rtotal = constrain(rtotal, 0, 255);
->    gtotal = constrain(gtotal, 0, 255);
->    btotal = constrain(btotal, 0, 255);
->    return color(rtotal, gtotal, btotal);
-> }
 
 Detección de bordes
 
