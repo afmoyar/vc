@@ -46,9 +46,9 @@ identidad
 >
 > function setup() {
 >    createCanvas(350, 250);
->    vidIdentidad =  createVideo('/vc/docs/sketches/flower.mp4'); 
+>    vidIdentidad =  createVideo('/vc/docs/sketches/fingers.webm'); 
 >    vidIdentidad.hide();
->    vidIdentidad.resize
+>    vidIdentidad.resize(350, 250)
 >    vidIdentidad.volume(0);
 > }
 >
