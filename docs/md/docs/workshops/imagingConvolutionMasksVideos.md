@@ -49,7 +49,6 @@ Identidad
 >    createCanvas(640, 360);
 >    walkvid.hide();
 >    walkvid.volume(0);
->    walkvid.size(640,360);
 >}
 >
 > function draw() {
