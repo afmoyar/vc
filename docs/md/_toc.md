@@ -7,6 +7,7 @@
 > [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
 > [Imaging Negative](/docs/workshops/imagingNegative)
 > [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
+> [Imaging Convolution Masks Video](/docs/workshops/imagingConvolutionMasksVideos)
 > [Imaging ASCII](/docs/workshops/imagingASCII)
 > [Imaging Mosaico](/docs/workshops/imagingMosaico)
 > [Rendering](/docs/workshops/rendering)
