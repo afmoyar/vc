@@ -38,9 +38,10 @@ identidad
 >
 > function setup() {
 >   createCanvas(350, 250);
->   vid = createVideo(['/vc/docs/sketches/flower.mp4']);
->   vid.hide();
->   vid.loop();
+>   vidIdentidad = createVideo(['/vc/docs/sketches/flower.mp4']);
+>   vidIdentidad.hide();
+>   vidIdentidad.loop();
+>   vidIdentidad.volume(0);
 > }
 >
 > function draw() {   
