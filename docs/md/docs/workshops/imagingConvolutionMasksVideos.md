@@ -27,7 +27,7 @@
 
 Identidad
 
-> :P5 width=350, height=250
+> :P5 width=320, height=240
 >
 > let fingers;
 > 
