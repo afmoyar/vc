@@ -35,27 +35,20 @@ identidad
 >    [0, 1, 0],
 >    [0, 0, 0]
 > ];
-> 
-> function preload() {
->    vidIdentidad =  createVideo("/vc/docs/sketches/flower.mp4");
-> }
->
-> function mousePressed() {
->    vidIdentidad.loop();
-> }
 >
 > function setup() {
->    createCanvas(350, 250);
->    vidIdentidad.hide();
->    vidIdentidad.resize(350, 250)
->    vidIdentidad.volume(0);
+>   createCanvas(350, 250);
+>   vid = createVideo(['/vc/docs/sketches/flower.mp4']);
+>   vid.hide();
+>   vid.loop();
 > }
 >
 > function draw() {   
->    vidIdentidad.loadPixels();
->    loadPixels();
->    for (let x = 1; x < vidIdentidad.width; x++) {
->        for (let y = 1; y < vidIdentidad.height; y++) {
+>   background(0);
+>   image(vidIdentidad, 0, 0, 350, 250);
+>   loadPixels();
+>   for (let x = 1; x < vidIdentidad.width; x++) {
+>       for (let y = 1; y < vidIdentidad.height; y++) {
 >            let c = convolution(x, y, identity);
 >            let index = 4 * (x + vidIdentidad.width * y);
 >            pixels[index] = red(c);
