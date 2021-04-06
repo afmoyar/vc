@@ -3,6 +3,13 @@
 > :Collapse label=Workshops
 > 
 > [Imaging & Video](/docs/workshops/imaging)
+> [Imaging RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
+> [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+> [Imaging Negative](/docs/workshops/imagingNegative)
+> [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
+> [Imaging Convolution Masks Video](/docs/workshops/imagingConvolutionMasksVideos)
+> [Imaging ASCII](/docs/workshops/imagingASCII)
+> [Imaging Mosaico](/docs/workshops/imagingMosaico)
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
@@ -23,3 +30,4 @@
 > [Andres Felipe Moya Rodríguez](/docs/members/Andres-Felipe-Moya-Rodriguez)
 > [Diego Armando Velasquez Vargas](/docs/members/Diego-Armando-Velasquez-Vargas)
 > [Hubert Alejandro Tovar Strubinger](/docs/members/Hubert-Alejandro-Tovar-Strubinger)
+> [Laura Natalia Gonzalez Mora](/docs/members/Laura-Natalia-Gonzalez-Mora)
