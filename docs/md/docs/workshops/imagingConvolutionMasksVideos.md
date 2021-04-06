@@ -28,7 +28,7 @@ identidad
 
 > :P5 width=350, height=250
 >
-> let vid;
+> let vidIdentidad;
 >
 > let identity= [
 >    [0, 0, 0],
@@ -37,27 +37,28 @@ identidad
 > ];
 > 
 > function preload() {
->    vid =  createVideo('/vc/docs/sketches/flower.mp4');
+>    vidIdentidad =  createVideo(['/vc/docs/sketches/fingers.webm']);
 > }
 >
 > function mousePressed() {
->    vid.loop();
+>    vidIdentidad.loop();
 > }
 >
 > function setup() {
 >    createCanvas(350, 250);
->    vid =  createVideo('/vc/docs/sketches/flower.mp4'); 
->    vid.hide();
->    vid.volume(0);
+>    vidIdentidad =  createVideo('/vc/docs/sketches/flower.mp4'); 
+>    vidIdentidad.hide();
+>    vidIdentidad.resize
+>    vidIdentidad.volume(0);
 > }
 >
 > function draw() {   
->    vid.loadPixels();
+>    vidIdentidad.loadPixels();
 >    loadPixels();
->    for (let x = 1; x < vid.width; x++) {
->        for (let y = 1; y < vid.height; y++) {
+>    for (let x = 1; x < vidIdentidad.width; x++) {
+>        for (let y = 1; y < vidIdentidad.height; y++) {
 >            let c = convolution(x, y, identity);
->            let index = 4 * (x + vid.width * y);
+>            let index = 4 * (x + vidIdentidad.width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
 >            pixels[index + 2] = blue(c);
@@ -78,11 +79,11 @@ identidad
 >            let r = 0;
 >            let g = 0;
 >            let b = 0;
->            if ((xpos >= 0 && xpos < vid.width) && (ypos >= 0 || ypos < vid.height)) {
->                let index = 4 * (xpos + vid.width * ypos);
->                r = vid.pixels[index];
->                g = vid.pixels[index + 1];
->                b = vid.pixels[index + 2];
+>            if ((xpos >= 0 && xpos < vidIdentidad.width) && (ypos >= 0 || ypos < vidIdentidad.height)) {
+>                let index = 4 * (xpos + vidIdentidad.width * ypos);
+>                r = vidIdentidad.pixels[index];
+>                g = vidIdentidad.pixels[index + 1];
+>                b = vidIdentidad.pixels[index + 2];
 >            }
 >            rtotal += matrix[kx + 1][ky + 1] * r;
 >            gtotal += matrix[kx + 1][ky + 1] * g;
