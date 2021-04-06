@@ -37,8 +37,6 @@ identidad
 > ];
 > function preload() {
 >    vid =  createVideo('/vc/docs/sketches/flower.mp4');
->    vid.size(350,250);
->    vid.volume(0);
 >}
 >
 >function mousePressed() {
@@ -47,7 +45,6 @@ identidad
 >
 >function setup() {
 >    createCanvas(350, 250);
->    vid =  createVideo('/vc/docs/sketches/flower.mp4'); 
 >    vid.hide();
 >    vid.size(350,250);
 >    vid.volume(0);
