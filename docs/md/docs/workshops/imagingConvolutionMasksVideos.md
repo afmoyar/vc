@@ -29,36 +29,32 @@ Identidad
 
 > :P5 width=640, height=360
 >
->let walkVid;
+> let walkvid;
 >
->let kernel = [
->    [-1, -1, -1],
->    [-1, 8, -1],
->    [-1, -1, -1]
->];
+> let kernel = [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]];
 >
->function preload() {
->    walkVid = createVideo("/vc/docs/sketches/walkVid.mp4");
+> function preload() {
+>    walkvid = createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
->function mousePressed() {
->    walkVid.loop();
+> function mousePressed() {
+>    walkvid.loop();
 >}
 >
->function setup() {
+> function setup() {
 >    createCanvas(640, 360);
->    walkVid.hide();
->    walkVid.volume(0);
->    walkVid.size(640,360);
+>    walkvid.hide();
+>    walkvid.volume(0);
+>    walkvid.size(640,360);
 >}
 >
->function draw() {
->    walkVid.loadPixels();
+> function draw() {
+>    walkvid.loadPixels();
 >    loadPixels();
->    for (let x = 1; x < walkVid.width; x++) {
->        for (let y = 1; y < walkVid.height; y++) {
+>    for (let x = 1; x < walkvid.width; x++) {
+>        for (let y = 1; y < walkvid.height; y++) {
 >            let c = convolution(x, y, kernel);
->            let index = 4 * (x + walkVid.width * y);
+>            let index = 4 * (x + walkvid.width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
 >            pixels[index + 2] = blue(c);
@@ -68,7 +64,7 @@ Identidad
 >    updatePixels();
 >}
 >
->function convolution(x, y, matrix) {
+> function convolution(x, y, matrix) {
 >    let rtotal = 0;
 >    let gtotal = 0;
 >    let btotal = 0;
@@ -79,11 +75,11 @@ Identidad
 >            let r = 0;
 >            let g = 0;
 >            let b = 0;
->            if ((xpos >= 0 && xpos < walkVid.width) && (ypos >= 0 || ypos < walkVid.height)) {
->                let index = 4 * (xpos + walkVid.width * ypos);
->                r = walkVid.pixels[index];
->                g = walkVid.pixels[index + 1];
->                b = walkVid.pixels[index + 2];
+>            if ((xpos >= 0 && xpos < walkvid.width) && (ypos >= 0 || ypos < walkvid.height)) {
+>                let index = 4 * (xpos + walkvid.width * ypos);
+>                r = walkvid.pixels[index];
+>                g = walkvid.pixels[index + 1];
+>                b = walkvid.pixels[index + 2];
 >            }
 >            rtotal += matrix[kx + 1][ky + 1] * r;
 >            gtotal += matrix[kx + 1][ky + 1] * g;
