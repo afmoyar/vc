@@ -38,7 +38,7 @@ Identidad
 >];
 >
 >function preload() {
->    fingers = createVideo("/vc/docs/sketches/flower.webm");
+>    fingers = createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
 >function mousePressed() {
