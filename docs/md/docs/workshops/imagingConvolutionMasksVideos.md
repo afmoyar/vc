@@ -29,35 +29,35 @@ Identidad
 
 > :P5 width=640, height=360
 >
-> let walkVid;
+>let walkVid;
 >
-> let identity= [
+>let kernel = [
 >    [0, 0, 0],
 >    [0, 1, 0],
 >    [0, 0, 0]
-> ];
-> 
-> function preload() {
->    walkVid =  createVideo("/vc/docs/sketches/walk.mp4");
+>];
+>
+>function preload() {
+>    walkVid = createVideo("/vc/docs/sketches/walkVid.mp4");
 >}
 >
-> function mousePressed() {
+>function mousePressed() {
 >    walkVid.loop();
 >}
 >
-> function setup() {
+>function setup() {
 >    createCanvas(640, 360);
 >    walkVid.hide();
->    walkVid.size(640,360);
 >    walkVid.volume(0);
+>    walkVid.size(640,360);
 >}
 >
-> function draw() {   
+>function draw() {
 >    walkVid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < walkVid.width; x++) {
 >        for (let y = 1; y < walkVid.height; y++) {
->            let c = convolution(x, y, identity);
+>            let c = convolution(x, y, kernel);
 >            let index = 4 * (x + walkVid.width * y);
 >            pixels[index] = red(c);
 >            pixels[index + 1] = green(c);
@@ -68,7 +68,7 @@ Identidad
 >    updatePixels();
 >}
 >
-> function convolution(x, y, matrix) {
+>function convolution(x, y, matrix) {
 >    let rtotal = 0;
 >    let gtotal = 0;
 >    let btotal = 0;
