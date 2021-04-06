@@ -28,24 +28,22 @@ identidad
 
 > :P5 width=350, height=250
 >
->let vid;
+> let vid;
 >
 > let identity= [
 >    [0, 0, 0],
 >    [0, 1, 0],
 >    [0, 0, 0]
 > ];
+> 
 > function preload() {
 >    vid =  createVideo('/vc/docs/sketches/flower.mp4');
->}
->
->function mousePressed() {
->    vid.loop();
 >}
 >
 >function setup() {
 >    createCanvas(350, 250);
 >    vid.hide();
+>    vid.loop();
 >    vid.size(350,250);
 >    vid.volume(0);
 >}
