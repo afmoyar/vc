@@ -31,7 +31,11 @@ Identidad
 >
 > let walkvid;
 >
-> let kernel = [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]];
+> let kernel = [
+>    [-1, -1, -1],
+>    [-1, 8, -1],
+>    [-1, -1, -1]
+> ];
 >
 > function preload() {
 >    walkvid = createVideo("/vc/docs/sketches/walk.mp4");
