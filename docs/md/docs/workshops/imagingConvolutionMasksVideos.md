@@ -27,7 +27,7 @@
 
 Identidad
 
-> :P5 width=350, height=250
+> :P5 width=640, height=360
 >
 >let vid;
 >
@@ -46,9 +46,9 @@ Identidad
 >}
 >
 >function setup() {
->    createCanvas(350, 250);
+>    createCanvas(640, 360);
 >    vid.hide();
->    vid.size(350,250);
+>    vid.size(640,360);
 >    vid.volume(0);
 >}
 >
