@@ -26,18 +26,18 @@
 
 identidad
 
-> :P5 width=350, height=250
+> :P5 width=320, height=240
 >
 > let vidIdentidad;
 >
 > let identity= [
->    [0, 0, 0],
->    [0, 1, 0],
->    [0, 0, 0]
+>    [-1, -1, -1],
+>    [-1, 8, -1],
+>    [-1, -1, -1]
 > ];
 > 
 > function preload() {
->    vidIdentidad =  createVideo(['/vc/docs/sketches/fingers.webm']);
+>    vidIdentidad =  createVideo('/vc/docs/sketches/fingers.webm');
 > }
 >
 > function mousePressed() {
@@ -45,10 +45,10 @@ identidad
 > }
 >
 > function setup() {
->    createCanvas(350, 250);
+>    createCanvas(320, 240);
 >    vidIdentidad =  createVideo('/vc/docs/sketches/fingers.webm'); 
 >    vidIdentidad.hide();
->    vidIdentidad.resize(350, 250)
+>    vidIdentidad.resize(320, 240)
 >    vidIdentidad.volume(0);
 > }
 >
