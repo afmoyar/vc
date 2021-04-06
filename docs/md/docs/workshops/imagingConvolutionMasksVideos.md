@@ -4,7 +4,7 @@
 
 # Máscaras en videos
 
-> :P5 width=350, height=250
+> :P5 width=640, height=360
 >
 > let vid;
 >
@@ -16,7 +16,7 @@
 >    vidLoad
 >  );
 >
->  vid.size(350, 250);
+>  vid.size(640, 360);
 >}
 >
 >// This function is called when the video loads
@@ -31,15 +31,14 @@ Identidad
 >
 >let vid;
 >
-> let identity= [
+>let identity= [
 >    [0, 0, 0],
 >    [0, 1, 0],
 >    [0, 0, 0]
 > ];
-> function preload() {
->    vid =  createVideo('/vc/docs/sketches/walk.mp4');
->    vid.size(350,250);
->    vid.volume(0);
+> 
+>function preload() {
+>    vid =  createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
 >function mousePressed() {
@@ -48,7 +47,6 @@ Identidad
 >
 >function setup() {
 >    createCanvas(350, 250);
->    vid =  createVideo('/vc/docs/sketches/walk.mp4'); 
 >    vid.hide();
 >    vid.size(350,250);
 >    vid.volume(0);
@@ -111,9 +109,7 @@ Detección de bordes
 > ];
 >
 > function preload() {
->    vid =  createVideo('/vc/docs/sketches/walk.mp4');
->    vid.size(350,250);
->    vid.volume(0);
+>    vid =  createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
 >function setup() {
