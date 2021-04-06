@@ -42,13 +42,11 @@ identidad
 >
 >function setup() {
 >    createCanvas(350, 250);
+>    background(0);
 >    vid.hide();
 >    vid.loop();
 >    vid.size(350,250);
 >    vid.volume(0);
->}
->
->function draw() {   
 >    vid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < vid.width; x++) {
@@ -63,6 +61,7 @@ identidad
 >    }
 >    updatePixels();
 >}
+>
 >
 >function convolution(x, y, matrix) {
 >    let rtotal = 0;
