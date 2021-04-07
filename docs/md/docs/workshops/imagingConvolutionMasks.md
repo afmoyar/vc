@@ -6,7 +6,7 @@ Una matriz de convolución o máscara es una matriz pequeña que se utiliza para
 Para hacer estos procesamientos se debe realizar una convolución entre un núcleo y una imagen.
 El kernel de una imagen es una pequeña matriz cuadrada de tamaño impar que, por medio de la convolución entre el kernel y la imagen, se utiliza para aplicar distintos efectos en la imagen. La convolución es el proceso en el cual se suma cada píxel de la imagen con sus vecinos locales, teniendo en cuenta los pesos indicados por el kernel. De esta forma, si tenemos la matriz de píxeles:
 
-# Máscaras en Imágenes
+### Máscaras en Imágenes
 
 > :P5 width=350, height=450
 >
@@ -19,7 +19,15 @@ El kernel de una imagen es una pequeña matriz cuadrada de tamaño impar que, po
 >   image(img, 0, 0,width,height);
 > }
 
-identidad
+identidad\
+Retorna la misma imágen\
+Kernel utilizado:
+
+    |0  0  0|
+    |0  1  0|
+    |0  0  0|
+
+
 > :P5  width=350, height=500
 >
 > let img;
@@ -84,7 +92,15 @@ identidad
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Detección de bordes
+Detección de bordes\
+Identifica los puntos en una imagen digital en la que el brillo de la imagen cambia drásticamente, es decir tiene discontinuidades.
+
+Kernel utilizado:
+
+    |1  0  -1|      |0  -1  0|      |-1  -1  -1|
+    |0  0   0|      |-1  4 -1|      |-1   4  -1|
+    |-1  0  1|      |0  -1  0|      |-1  -1  -1|
+
 > :P5  width=350, height=500
 >
 > let img;
@@ -277,7 +293,15 @@ Detección de bordes
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Enfocar
+Enfocar\
+Incrementa el contraste entre lasr regiones brillantes y oscuras para resaltar las características
+
+Kernel utilizado:
+
+    |0  -1   0|
+    |-1  5  -1|
+    |0  -1   0|
+
 > :P5  width=350, height=500
 >
 > let img;
@@ -342,7 +366,15 @@ Enfocar
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Desenfoque de cuadro
+Desenfoque de cuadro\
+Asigna a cada pixel un valor igual al valor promedio de los pixeles que lo rodean.
+
+Kernel utilizado:
+
+            |1  1  1|
+       1/9* |1  1  1|
+            |1  1  1|
+
 > :P5  width=350, height=500
 >
 > let img;
@@ -407,7 +439,14 @@ Desenfoque de cuadro
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Desenfoque Gausiano 3x3
+Desenfoque Gausiano 3x3\
+Es un suavizado de pixeles, swe mezclan los colores de los pixeles adyacentes el uno al otro, haciendo que la imágen pierda detalles
+
+Kernel utilizado:
+
+            |-1  -1  -1|
+    1/16*   |-1   4  -1|
+            |-1  -1  -1|
 > :P5  width=350, height=500
 >
 > let img;
@@ -472,18 +511,23 @@ Desenfoque Gausiano 3x3
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Desenfoque Gausiano 5x5
+Repujado
+Cada pixel de la imagen es reemplazado con luz o sombra 
+Kernel utilizado:
+
+    |-2  -1   0|
+    |-1   1   1|
+    |0    1  -1|
 > :P5  width=350, height=500
 >
 > let img;
 >
-> let gaussianBlur5 = [
->    [1.0 / 256.0, 4.0 / 256.0, 6.0 / 256.0, 4.0 / 256.0, 1.0 / 256.0],
->    [4.0 / 256.0, 16.0 / 256.0, 24.0 / 256.0, 16.0 / 256.0, 4.0 / 256.0],
->    [6.0 / 256.0, 24.0 / 256.0, 36.0 / 256.0, 24.0 / 256.0, 6.0 / 256.0],
->    [4.0 / 256.0, 16.0 / 256.0, 24.0 / 256.0, 16.0 / 256.0, 4.0 / 256.0],
->    [1.0 / 256.0, 4.0 / 256.0, 6.0 / 256.0, 4.0 / 256.0, 1.0 / 256.0]
+> let emboss = [
+>    [-2, -1, 0],
+>    [-1, 1, 1],
+>    [0, 1, 2]
 > ];
+>
 > function preload() {
 >    img = loadImage('/vc/docs/sketches/hushky.jpg');
 >}
@@ -494,20 +538,20 @@ Desenfoque Gausiano 5x5
 >}
 >
 > function draw() {
->   gaussianBlur5Img = createImage(img.width, img.height);
->   gaussianBlur5Img.loadPixels();
+>   embossImg = createImage(img.width, img.height);
+>   embossImg.loadPixels();
 >   for (let x = 1; x < img.width; x++) {
 >     for (let y = 1; y < img.height; y++) {
->        let c = convolution(x, y, gaussianBlur5);
+>        let c = convolution(x, y, emboss);
 >            let index = 4 * (x + img.width * y);
->            gaussianBlur5Img.pixels[index] = red(c);
->            gaussianBlur5Img.pixels[index + 1] = green(c);
->            gaussianBlur5Img.pixels[index + 2] = blue(c);
->            gaussianBlur5Img.pixels[index + 3] = alpha(c);
+>            embossImg.pixels[index ] = red(c);
+>            embossImg.pixels[index + 1] = green(c);
+>            embossImg.pixels[index + 2] = blue(c);
+>            embossImg.pixels[index + 3] = alpha(c);
 >        }
 >    }
->    gaussianBlur5Img.updatePixels();
->    image(gaussianBlur5Img, 0, 0,width,height);
+>    embossImg.updatePixels();
+>    image(embossImg, 0, 0,width,height);
 >}
 >
 > function convolution(x, y, matrix) {
@@ -538,19 +582,26 @@ Desenfoque Gausiano 5x5
 >    return color(rtotal, gtotal, btotal);
 >}
 
-Mascara de desenfoque 5x5
+Contraste
+La diferencia entre la intensidad más alta y la más baja
+Kernel utilizado:
+
+       |1  1  1|       |1  0  1|  
+       |1  1  1|       |0  0  0| 
+       |1  1  1|       |1  0  1| 
+
+
 
 > :P5  width=350, height=500
 >
 > let img;
 >
-> let unsharpMasking5 = [
->    [1.0 / -256.0, 4.0 / -256.0, 6.0 / -256.0, 4.0 / -256.0, 1.0 / -256.0],
->    [4.0 / -256.0, 16.0 / -256.0, 24.0 / -256.0, 16.0 / -256.0, 4.0 / -256.0],
->    [6.0 / -256.0, 24.0 / -256.0, -476.0 / -256.0, 24.0 / -256.0, 6.0 / -256.0],
->    [4.0 / -256.0, 16.0 / -256.0, 24.0 / -256.0, 16.0 / -256.0, 4.0 / -256.0],
->    [1.0 / -256.0, 4.0 / -256.0, 6.0 / -256.0, 4.0 / -256.0, 1.0 / -256.0]
+> let emboss = [
+>    [1, 1, 1],
+>    [1, 1, 1],
+>    [1, 1, 1]
 > ];
+>
 > function preload() {
 >    img = loadImage('/vc/docs/sketches/hushky.jpg');
 >}
@@ -561,20 +612,20 @@ Mascara de desenfoque 5x5
 >}
 >
 > function draw() {
->   unsharpMasking5Img = createImage(img.width, img.height);
->   unsharpMasking5Img.loadPixels();
+>   embossImg = createImage(img.width, img.height);
+>   embossImg.loadPixels();
 >   for (let x = 1; x < img.width; x++) {
 >     for (let y = 1; y < img.height; y++) {
->        let c = convolution(x, y, unsharpMasking5);
+>        let c = convolution(x, y, emboss);
 >            let index = 4 * (x + img.width * y);
->            unsharpMasking5Img.pixels[index] = red(c);
->            unsharpMasking5Img.pixels[index + 1] = green(c);
->            unsharpMasking5Img.pixels[index + 2] = blue(c);
->            unsharpMasking5Img.pixels[index + 3] = alpha(c);
+>            embossImg.pixels[index ] = red(c);
+>            embossImg.pixels[index + 1] = green(c);
+>            embossImg.pixels[index + 2] = blue(c);
+>            embossImg.pixels[index + 3] = alpha(c);
 >        }
 >    }
->    unsharpMasking5Img.updatePixels();
->    image(unsharpMasking5Img, 0, 0,width,height);
+>    embossImg.updatePixels();
+>    image(embossImg, 0, 0,width,height);
 >}
 >
 > function convolution(x, y, matrix) {
@@ -604,5 +655,72 @@ Mascara de desenfoque 5x5
 >    btotal = constrain(btotal, 0, 255);
 >    return color(rtotal, gtotal, btotal);
 >}
+
+
+> :P5  width=350, height=500
+>
+> let img;
+>
+> let emboss = [
+>    [1, 0, 1],
+>    [0, 0, 0],
+>    [1, 0, 1]
+> ];
+>
+> function preload() {
+>    img = loadImage('/vc/docs/sketches/hushky.jpg');
+>}
+>
+> function setup() {
+>    createCanvas(350, 500);
+>    img.loadPixels();
+>}
+>
+> function draw() {
+>   embossImg = createImage(img.width, img.height);
+>   embossImg.loadPixels();
+>   for (let x = 1; x < img.width; x++) {
+>     for (let y = 1; y < img.height; y++) {
+>        let c = convolution(x, y, emboss);
+>            let index = 4 * (x + img.width * y);
+>            embossImg.pixels[index ] = red(c);
+>            embossImg.pixels[index + 1] = green(c);
+>            embossImg.pixels[index + 2] = blue(c);
+>            embossImg.pixels[index + 3] = alpha(c);
+>        }
+>    }
+>    embossImg.updatePixels();
+>    image(embossImg, 0, 0,width,height);
+>}
+>
+> function convolution(x, y, matrix) {
+>    let rtotal = 0;
+>    let gtotal = 0;
+>    let btotal = 0;
+>    for (kx = -1; kx <= 1; kx++) {
+>        for (ky = -1; ky <= 1; ky++) {
+>            let xpos = x + kx;
+>            let ypos = y + ky;
+>            let r = 0;
+>            let g = 0;
+>            let b = 0;
+>            if ((xpos >= 0 && xpos < img.width) && (ypos >= 0 || ypos < img.height)) {
+>                let index = 4 * (xpos + img.width * ypos);
+>                r = img.pixels[index];
+>                g = img.pixels[index + 1];
+>                b = img.pixels[index + 2];
+>            }
+>            rtotal += matrix[kx + 1][ky + 1] * r;
+>            gtotal += matrix[kx + 1][ky + 1] * g;
+>            btotal += matrix[kx + 1][ky + 1] * b;
+>        }
+>    }
+>    rtotal = constrain(rtotal, 0, 255);
+>    gtotal = constrain(gtotal, 0, 255);
+>    btotal = constrain(btotal, 0, 255);
+>    return color(rtotal, gtotal, btotal);
+>}
+
+
 
 > :ToCPrevNext
