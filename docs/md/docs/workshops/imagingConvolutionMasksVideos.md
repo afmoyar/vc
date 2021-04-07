@@ -41,16 +41,18 @@ Identidad
 >    walkvid = createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
+>function mousePressed() {
+>    walkvid.loop();
+>}
+>
 > function setup() {
 >    createCanvas(640, 360);
->    walkvid.loop();
 >    walkvid.hide();
 >    walkvid.volume(0);
 >}
 >
 > function draw() {
 >    walkvid.loadPixels();
->    image(walkvid, 0, 0, 640, 360);
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
 >        for (let y = 1; y < walkvid.height; y++) {
@@ -109,6 +111,10 @@ Detección de bordes
 >    walkvid = createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
+>function mousePressed() {
+>    walkvid.loop();
+>}
+>
 > function setup() {
 >    createCanvas(640, 360);
 >    walkvid.hide();
@@ -116,7 +122,6 @@ Detección de bordes
 >}
 >
 > function draw() {
->    image(walkvid, 0, 0, 640, 360);
 >    walkvid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
@@ -174,6 +179,10 @@ Detección de bordes
 >    walkvid = createVideo("/vc/docs/sketches/walk.mp4");
 >}
 >
+>function mousePressed() {
+>    walkvid.loop();
+>}
+>
 > function setup() {
 >    createCanvas(640, 360);
 >    walkvid.hide();
@@ -181,7 +190,6 @@ Detección de bordes
 >}
 >
 > function draw() {
->    image(walkvid, 0, 0, 640, 360);
 >    walkvid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
