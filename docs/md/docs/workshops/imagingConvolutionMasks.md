@@ -19,7 +19,7 @@ El kernel de una imagen es una pequeña matriz cuadrada de tamaño impar que, po
 >   image(img, 0, 0,width,height);
 > }
 
-####identidad\
+####Identidad
 Retorna la misma imágen\
 Kernel utilizado:
 
@@ -92,7 +92,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Detección de bordes\
+####Detección de bordes
 Identifica los puntos en una imagen digital en la que el brillo de la imagen cambia drásticamente, es decir tiene discontinuidades.
 
 Kernel utilizado:
@@ -293,7 +293,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Enfocar\
+####Enfocar
 Incrementa el contraste entre lasr regiones brillantes y oscuras para resaltar las características
 
 Kernel utilizado:
@@ -439,7 +439,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Desenfoque Gausiano 3x3\
+####Desenfoque Gausiano 3x3
 Es un suavizado de pixeles, swe mezclan los colores de los pixeles adyacentes el uno al otro, haciendo que la imágen pierda detalles
 
 Kernel utilizado:
