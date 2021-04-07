@@ -2,6 +2,18 @@
 
 ## Máscaras de convolución
 
+Usando la función general para la convolución:
+> :P5 width=1000, height=70
+>
+> let img;
+> function preload(){
+>   img = loadImage('/vc/docs/sketches/sum.PNG');
+>}
+> function setup() {
+>   createCanvas(img.width, img.height);
+>   image(img, 0, 0,width,height);
+> }
+
 # Máscaras en videos
 
 > :P5 width=640, height=360
