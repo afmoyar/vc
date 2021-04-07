@@ -25,7 +25,7 @@
 >  vid.volume(0);
 >}
 
-####Identidad
+#### Identidad
 Retorna la misma imágen\
 Kernel utilizado:
 
@@ -102,7 +102,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Detección de bordes
+#### Detección de bordes
 Identifica los puntos en una imagen digital en la que el brillo de la imagen cambia drásticamente, es decir tiene discontinuidades.
 
 Kernel utilizado:
@@ -316,7 +316,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >} 
 
-####Enfocar
+#### Enfocar
 Incrementa el contraste entre lasr regiones brillantes y oscuras para resaltar las características
 
 Kernel utilizado:
@@ -393,7 +393,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >} 
 
-####Desenfoque de cuadro
+#### Desenfoque de cuadro
 Asigna a cada pixel un valor igual al valor promedio de los pixeles que lo rodean.
 
 Kernel utilizado:
@@ -470,7 +470,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Desenfoque Gausiano 3x3
+#### Desenfoque Gausiano 3x3
 Es un suavizado de pixeles, swe mezclan los colores de los pixeles adyacentes el uno al otro, haciendo que la imágen pierda detalles
 
 Kernel utilizado:
@@ -547,7 +547,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Repujado
+#### Repujado
 Cada pixel de la imagen es reemplazado con luz o sombra
 Kernel utilizado:
 
@@ -623,7 +623,7 @@ Kernel utilizado:
 >    return color(rtotal, gtotal, btotal);
 >}
 
-####Contraste
+#### Contraste
 La diferencia entre la intensidad más alta y la más baja
 Kernel utilizado:
 
