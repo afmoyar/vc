@@ -49,6 +49,7 @@ Identidad
 >}
 >
 > function draw() {
+>    walkvid.loop();
 >    walkvid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
@@ -110,12 +111,12 @@ Detección de bordes
 >
 > function setup() {
 >    createCanvas(640, 360);
->    walkvid.loop();
 >    walkvid.hide();
 >    walkvid.volume(0);
 >}
 >
 > function draw() {
+>    walkvid.loop();
 >    walkvid.loadPixels();
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
