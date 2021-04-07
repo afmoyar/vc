@@ -76,9 +76,9 @@ Para ello se usa un promedio ponderado de los valores rgb de cada pixel:
 >      let r_norm = r/255;
 >      let g_norm = g/255;
 >      let b_norm = b/255;
->      let r_prim = 255 * Math.pow((r_norm/255),(1/2.2));
->      let g_prim = 255 * Math.pow((g_norm/255),(1/2.2));
->      let b_prim = 255 * Math.pow((b_norm/255),(1/2.2));
+>      let r_prim = 255 * Math.pow((r_norm),(1/2.2));
+>      let g_prim = 255 * Math.pow((g_norm),(1/2.2));
+>      let b_prim = 255 * Math.pow((b_norm),(1/2.2));
 >      let y = 0.2999 * r_prim + 0.587 * g_prim + 0.114 * b_prim;
 >      let grayColor = color(y, y, y);
 >      pixels[i] = red(grayColor);
