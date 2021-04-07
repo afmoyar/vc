@@ -49,8 +49,8 @@ Identidad
 >}
 >
 > function draw() {
->    walkvid.loop();
 >    walkvid.loadPixels();
+>    image(walkvid, 0, 0, 640, 360);
 >    loadPixels();
 >    for (let x = 1; x < walkvid.width; x++) {
 >        for (let y = 1; y < walkvid.height; y++) {
