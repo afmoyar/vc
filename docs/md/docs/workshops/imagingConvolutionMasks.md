@@ -4,7 +4,19 @@
 
 Una matriz de convolución o máscara es una matriz pequeña que se utiliza para desenfoque, enfoque, realce, detección de bordes.
 Para hacer estos procesamientos se debe realizar una convolución entre un núcleo y una imagen.
-El kernel de una imagen es una pequeña matriz cuadrada de tamaño impar que, por medio de la convolución entre el kernel y la imagen, se utiliza para aplicar distintos efectos en la imagen. La convolución es el proceso en el cual se suma cada píxel de la imagen con sus vecinos locales, teniendo en cuenta los pesos indicados por el kernel. De esta forma, si tenemos la matriz de píxeles:
+El kernel de una imagen es una pequeña matriz cuadrada de tamaño impar que, por medio de la convolución entre el kernel y la imagen, se utiliza para aplicar distintos efectos en la imagen. La convolución es el proceso en el cual se suma cada píxel de la imagen con sus vecinos locales, teniendo en cuenta los pesos indicados por el kernel.
+
+Usando la función general para la convolución:
+> :P5 width=1000, height=70
+>
+> let img;
+> function preload(){
+>   img = loadImage('/vc/docs/sketches/sum.PNG');
+>}
+> function setup() {
+>   createCanvas(img.width, img.height);
+>   image(img, 0, 0,width,height);
+> }
 
 ### Máscaras en Imágenes
 
