@@ -48,8 +48,10 @@ p5js también posee una función diseñada para obtener este mismo resultado, la
 > > > }
 >
 > > :Tab title=P5Code
+> >
+> > <center>IMAGEN ORIGINAL<center/>
+> >
 > > ```md
-> > IMAGEN ORIGINAL
 > > > :P5 width=350, height=450
 > > >
 > > > let img;
@@ -60,8 +62,10 @@ p5js también posee una función diseñada para obtener este mismo resultado, la
 > > >   createCanvas(350, 450);
 > > >   image(img, 0, 0,width,height);
 > > > }
+> > ```
+> > <center>IMAGEN BLANCO Y NEGRO<center/>
 > >
-> > IMAGEN BLANCO Y NEGRO
+> > ```md
 > > > :P5 width=350, height=450
 > > >
 > > > let img;
@@ -91,44 +95,94 @@ p5js también posee una función diseñada para obtener este mismo resultado, la
 
 ### Gama de grises en video
 
-> :P5 width=350, height=250
->
->let vid;
->function setup() {
->  noCanvas();
->
->  vid = createVideo(
->    ['/vc/docs/sketches/youWinTheInternet.mp4'],
->    vidLoad
->  );
->
->  vid.size(350, 250);
->}
->
->// This function is called when the video loads
->function vidLoad() {
->  vid.loop();
->  vid.volume(0);
->}
 
-
-> :P5 width=350, height=250
+> :Tabs
+> > :Tab title=Presentación
+> > >
+> > > :P5 width=350, height=250
+> > >
+> > >let vid;
+> > >function setup() {
+> > >  noCanvas();
+> > >
+> > >  vid = createVideo(
+> > >    ['/vc/docs/sketches/youWinTheInternet.mp4'],
+> > >    vidLoad
+> > >  );
+> > >
+> > >  vid.size(350, 250);
+> > >}
+> > >
+> > >// This function is called when the video loads
+> > >function vidLoad() {
+> > >  vid.loop();
+> > >  vid.volume(0);
+> > >}
+> > 
+> > 
+> > > :P5 width=350, height=250
+> > >
+> > >let vid;
+> > >
+> > >function setup() {
+> > >  createCanvas(350, 250);
+> > >  // specify multiple formats for different browsers
+> > >  vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+> > >  vid.hide();
+> > >  vid.loop();
+> > >}
+> > >
+> > >function draw() {
+> > >  background(0);
+> > >  image(vid, 0, 0,350, 250); // draw the video frame to canvas
+> > >  filter(GRAY);
+> > >}
 >
->let vid;
->
->function setup() {
->  createCanvas(350, 250);
->  // specify multiple formats for different browsers
->  vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
->  vid.hide();
->  vid.loop();
->}
->
->function draw() {
->  background(0);
->  image(vid, 0, 0,350, 250); // draw the video frame to canvas
->  filter(GRAY);
->}
->
+> > :Tab title=P5Code
+> >
+> > <center>VIDEO ORIGINAL<center/>
+> >
+> > ```md
+> > > :P5 width=350, height=250
+> > >
+> > >let vid;
+> > >function setup() {
+> > >  noCanvas();
+> > >
+> > >  vid = createVideo(
+> > >    ['/vc/docs/sketches/youWinTheInternet.mp4'],
+> > >    vidLoad
+> > >  );
+> > >
+> > >  vid.size(350, 250);
+> > >}
+> > >
+> > >// This function is called when the video loads
+> > >function vidLoad() {
+> > >  vid.loop();
+> > >  vid.volume(0);
+> > >}
+> > ```
+> > <center>VIDEO EN BLANCO Y NEGRO<center/>
+> >
+> > ```md 
+> > > :P5 width=350, height=250
+> > >
+> > >let vid;
+> > >
+> > >function setup() {
+> > >  createCanvas(350, 250);
+> > >  // specify multiple formats for different browsers
+> > >  vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+> > >  vid.hide();
+> > >  vid.loop();
+> > >}
+> > >
+> > >function draw() {
+> > >  background(0);
+> > >  image(vid, 0, 0,350, 250); // draw the video frame to canvas
+> > >  filter(GRAY);
+> > >}
+> > ```
 
 > :ToCPrevNext
