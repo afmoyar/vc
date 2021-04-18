@@ -197,7 +197,7 @@ En el código desarrollado se usaron
 > > >
 > > >   updatePixels();
 > > > }
-> > > 
+> 
 > > :Tab title= \\[ 255 * ( \frac{r}{255}) ^ { 4 } \\]
 > > > :P5 width=350, height=450
 > > >
@@ -235,7 +235,6 @@ En el código desarrollado se usaron
 > > >
 > > >   updatePixels();
 > > > }
-> >
 > 
 
 
@@ -272,6 +271,44 @@ En el código desarrollado se usaron
 > > >      }
 > > >  }
 > > >  updatePixels();
->}
+> > > }
+> 
+> > :Tab title=Code P5
+> > <center>IMAGEN ORIGINAL<center/>
+> >
+> > ```md
+> > > :P5 width=350, height=250
+> > >
+> > > let vid;
+> > >
+> > > function setup() {
+> > >   createCanvas(350, 250);
+> > >   vid = createVideo(['/vc/docs/sketches/youWinTheInternet.mp4']);
+> > >   vid.hide();
+> > >   vid.loop();
+> > >}
+> > >
+> > > function draw() {
+> > >  background(0);
+> > >  image(vid, 0, 0, 350, 250);
+> > >  loadPixels();
+> > >  const step = 1;
+> > >  for (let y = 0; y < height; y+= step) {
+> > >    for (let x = 0; x < width; x+= step) {
+> > >       let index = 4 * (x + width * y);
+> > >       let r = pixels[index];
+> > >       let g = pixels[index + 1];
+> > >       let b = pixels[index + 2];
+> > >       let gamma = r * 0.299 + g * 0.587 + b * 0.0114;
+> > >       let grayColor = color(gamma, gamma, gamma);
+> > >       pixels[index] = gamma;
+> > >       pixels[index + 1] = gamma;
+> > >       pixels[index + 2] = gamma;
+> > >      }
+> > >  }
+> > >  updatePixels();
+> > > }
+> > ```
+>
 
 >:ToCPrevNext
