@@ -123,6 +123,7 @@ En el código desarrollado se usaron
 \\[ exp = \frac{1}{2.2} , exp = \frac{1}{4} , exp = 4\\]
 > :Tabs
 > > :Tab title= \\[ 255 * ( \frac{r}{255}) ^ { 1/2.2 } \\]
+> > >
 > > > :P5 width=350, height=450
 > > >
 > > > let img4
@@ -161,6 +162,7 @@ En el código desarrollado se usaron
 > > > }
 > 
 > > :Tab title= \\[ 255 * ( \frac{r}{255}) ^ { 1/4 } \\]
+> > > 
 > > > :P5 width=350, height=450
 > > >
 > > > let img4
@@ -199,6 +201,7 @@ En el código desarrollado se usaron
 > > > }
 > 
 > > :Tab title= \\[ 255 * ( \frac{r}{255}) ^ { 4 } \\]
+> > >
 > > > :P5 width=350, height=450
 > > >
 > > > let img4
@@ -241,6 +244,7 @@ En el código desarrollado se usaron
 ## VideoLuma
 > :Tabs
 > > :Tab title=Presentación
+> > >
 > > > :P5 width=350, height=250
 > > >
 > > > let vid;
@@ -274,6 +278,7 @@ En el código desarrollado se usaron
 > > > }
 > 
 > > :Tab title=Code P5
+> > 
 > > <center>IMAGEN ORIGINAL<center/>
 > >
 > > ```md
