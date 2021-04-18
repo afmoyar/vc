@@ -4,12 +4,16 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Imaging & Video](/docs/workshops/imaging)
-> > [Imaging RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
-> > [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
-> > [Imaging Negative](/docs/workshops/imagingNegative)
-> > [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
-> > [Imaging Convolution Masks Video](/docs/workshops/imagingConvolutionMasksVideos)
+> > > :Collapse label=RGB, Luma & Negative
+> > >
+> > > [RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
+> > > [Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+> > > [Negative](/docs/workshops/imagingNegative)
+> >
+> > > :Collapse label=Convolution Masks
+> > > [Imaging](/docs/workshops/imagingConvolutionMasks)
+> > > [Video](/docs/workshops/imagingConvolutionMasksVideos)
+> >
 > > [Imaging ASCII](/docs/workshops/imagingASCII)
 > > [Imaging Mosaico](/docs/workshops/imagingMosaico)
 >
