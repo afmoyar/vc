@@ -11,6 +11,7 @@
 > > > [Negative](/docs/workshops/imagingNegative)
 > >
 > > > :Collapse label=Convolution Masks
+> > >
 > > > [Imaging](/docs/workshops/imagingConvolutionMasks)
 > > > [Video](/docs/workshops/imagingConvolutionMasksVideos)
 > >
