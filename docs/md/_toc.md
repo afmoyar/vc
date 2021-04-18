@@ -17,6 +17,7 @@
 > >
 > > [Imaging ASCII](/docs/workshops/imagingASCII)
 > > [Imaging Mosaico](/docs/workshops/imagingMosaico)
+> > [Conclusions and Future Work](/docs/workshops/conclusions)
 >
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
