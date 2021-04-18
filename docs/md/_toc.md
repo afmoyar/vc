@@ -2,14 +2,22 @@
 
 > :Collapse label=Workshops
 > 
-> [Imaging & Video](/docs/workshops/imaging)
-> [Imaging RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
-> [Imaging Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
-> [Imaging Negative](/docs/workshops/imagingNegative)
-> [Imaging Convolution Masks](/docs/workshops/imagingConvolutionMasks)
-> [Imaging Convolution Masks Video](/docs/workshops/imagingConvolutionMasksVideos)
-> [Imaging ASCII](/docs/workshops/imagingASCII)
-> [Imaging Mosaico](/docs/workshops/imagingMosaico)
+> > :Collapse label=Imaging & Video
+> >
+> > > :Collapse label=RGB, Luma & Negative
+> > >
+> > > [RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
+> > > [Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+> > > [Negative](/docs/workshops/imagingNegative)
+> >
+> > > :Collapse label=Convolution Masks
+> > >
+> > > [Imaging](/docs/workshops/imagingConvolutionMasks)
+> > > [Video](/docs/workshops/imagingConvolutionMasksVideos)
+> >
+> > [Imaging ASCII](/docs/workshops/imagingASCII)
+> > [Imaging Mosaico](/docs/workshops/imagingMosaico)
+>
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
@@ -24,6 +32,7 @@
 > [3D](/docs/snippets/3d)
 > [Libs](/docs/snippets/lib)
 > [Sound](/docs/snippets/sound)
+> [Formulae](/docs/snippets/formulae)
 
 > :Collapse label=Members
 > 
