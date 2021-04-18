@@ -4,7 +4,7 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > > :Collapse label=RGB, Luma & Negative
+> > > :Collapse label=GrayScale & Negative
 > > >
 > > > [RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
 > > > [Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)

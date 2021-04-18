@@ -3,7 +3,14 @@
 ## Luma 
 El método de escala de grises hecho con LUMA, nos muestra una forma más efectiva para hallar otros tipos de grises para cuando una imagen se encuentra ultra saturada o con mucho brillo, ya que este le da un peso específico a cada uno de los valores del espectro RGB. Para trabajos futuros sería bastante interesante encontrar que valores según la cantidad de brillo se debe aplicar en la fórmula. 
 
-## negativos
+## Escala de grises RGB y negativo
+
+P5js es lo suficientemente flexible como para permitir manipular y modificar los colores de los pixeles de imágenes y videos. Las mismas estrategias de programación usadas para presentar una imagen o video en escala de grises pueden ser aplicadas para presentar el negativo de la misma, la diferencia radica solo en la manipulación matemática de los valores RGB de cada pixel.
+
+P5js también posee herramientas para conseguir los mismos resultados en una cantidad menor de líneas.
+
+Dada la similaridad entre estos dos programas, una idea de trabajo futuro puede ser la integración de un solo algoritmo que sea capaz de generar tanto la escala de grises como el negativo, podría haber un mecanismo de interactividad que le permita al usuario cambiar entre una u otra.
+
 
 ## Máscaras de convolución
 La aplicación de filtros en las imágenes, en especial las máscaras de convolución consiste en modificar las matrices de la imagen digitalizada. A parte de poner un filtro a la imagen, también se puede hacer un análisis del procesamiento de la imagen mediante el filtro. Como trabajo futuro está la coincidencia de patrones, ubicando el objeto y luego haciendo mediciones sobre él en la imágen,permitiendo hacer un reconocimiento de objetos para identificar al deseado.
@@ -19,5 +26,11 @@ Tomando en cuenta estos resultados una posible mejora a futuro es la implementac
 
 
 ## Conclusión General
+
+Así como hemos podido comprobar la versatilidad de p5js, también hemos detectado ciertos inconvenientes durante el desarrollo de este taller:
+
+- Ejecutar en forma paralela varios scripts en una sola página afecta negativamente la experiencia de usuario, pues la página se torna lenta y los resultados no se visualizan de la manera más satisfactoria.
+- Los scripts suelen tener comportamientos impredecibles ante cambios minúsculos; esto dificulta el proceso de depuración de código.
+
 
 > :ToCPrevNext
