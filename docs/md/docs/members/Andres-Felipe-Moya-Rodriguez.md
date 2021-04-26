@@ -224,4 +224,10 @@ En 1904, Mary Everest Boole (matemática inglesa) inventó las ***Curve stitchin
 > > >  
 > > >}
 > > ```
+
+
+
+
+> :P5 sketch=/docs/sketches/dogeGame.js, width=400, height=300
+
 > :ToCPrevNext
