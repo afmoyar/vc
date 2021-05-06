@@ -28,6 +28,10 @@
 >  >  >  > [RGB-GrayScale](/docs/workshops/imgHardwareRGBGrayScale)
 >  >  >  > [Luma-GrayScale]()
 >  >  >
+>  >  >  > :Collapse label=Convolution Masks
+>  >  >  >
+>  >  >  > [Imaging](/docs/workshops/imgHardwareConvolutionMasks)
+>  >  >  > [Video]()
 >
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
