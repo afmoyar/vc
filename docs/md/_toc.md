@@ -1,23 +1,37 @@
 [Home](/)
 
 > :Collapse label=Workshops
-> 
-> > :Collapse label=Imaging & Video
-> >
-> > > :Collapse label=GrayScale & Negative
-> > >
-> > > [RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
-> > > [Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
-> > > [Negative](/docs/workshops/imagingNegative)
-> >
-> > > :Collapse label=Convolution Masks
-> > >
-> > > [Imaging](/docs/workshops/imagingConvolutionMasks)
-> > > [Video](/docs/workshops/imagingConvolutionMasksVideos)
-> >
-> > [Imaging ASCII](/docs/workshops/imagingASCII)
-> > [Imaging Mosaico](/docs/workshops/imagingMosaico)
-> > [Conclusions and Future Work](/docs/workshops/conclusions)
+>  
+>  > :Collapse label=Imaging & Video
+>  > 
+>  >  >:Collapse label=Software
+>  >  >
+>  >  >  > :Collapse label=GrayScale & Negative
+>  >  >  >
+>  >  >  > [RGB-GrayScale](/docs/workshops/imagingRGBGrayScale)
+>  >  >  > [Luma-GrayScale](/docs/workshops/imagingLumaGrayScale)
+>  >  >  > [Negative](/docs/workshops/imagingNegative)
+>  >  > 
+>  >  >  > :Collapse label=Convolution Masks
+>  >  >  >
+>  >  >  > [Imaging](/docs/workshops/imagingConvolutionMasks)
+>  >  >  > [Video](/docs/workshops/imagingConvolutionMasksVideos)
+>  >  > 
+>  >  >  [Imaging ASCII](/docs/workshops/imagingASCII)
+>  >  >  [Imaging Mosaico](/docs/workshops/imagingMosaico)
+>  >  >  [Conclusions and Future Work](/docs/workshops/conclusions)
+>  >
+>  >  >:Collapse label=Hardware
+>  >  >
+>  >  >  > :Collapse label=GrayScale
+>  >  >  >
+>  >  >  > [RGB-GrayScale](/docs/workshops/imgHardwareRGBGrayScale)
+>  >  >  > [Luma-GrayScale]()
+>  >  >
+>  >  >  > :Collapse label=Convolution Masks
+>  >  >  >
+>  >  >  > [Imaging](/docs/workshops/imgHardwareConvolutionMasks)
+>  >  >  > [Video]()
 >
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
