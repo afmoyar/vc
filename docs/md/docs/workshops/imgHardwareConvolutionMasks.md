@@ -1,6 +1,6 @@
 # Image and video processing
 
-## Gama de grises
+## Convolución en imágenes
 
 
 > :Tabs
