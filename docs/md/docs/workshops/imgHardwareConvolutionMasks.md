@@ -17,6 +17,7 @@ let planeSide = 400;
 let button;
 let button_2;
 let button_3;
+let button_4;
 let filterChoice = 1;
 let mask;
 function preload(){
@@ -32,7 +33,8 @@ function setup() {
     filterChoice = 1;
     button.style("color", "#00b5e2");
     button_2.style("color", "#000000");
-    button_3.style("color", "#000000"); 
+    button_3.style("color", "#000000");
+    button_4.style("color", "#000000"); 
   });
   button_2 = createButton('Filtro   1');
   button_2.position(600, 40);
@@ -40,7 +42,8 @@ function setup() {
     filterChoice = 2;
     button_2.style("color", "#00b5e2");
     button.style("color", "#000000");
-    button_3.style("color", "#000000"); 
+    button_3.style("color", "#000000");
+    button_4.style("color", "#000000");  
   });
   button_3 = createButton('Filtro   2');
   button_3.position(600, 70);
@@ -48,6 +51,16 @@ function setup() {
     filterChoice = 3;
     button_3.style("color", "#00b5e2");
     button_2.style("color", "#000000");
+    button.style("color", "#000000");
+    button_4.style("color", "#000000"); 
+  });
+  button_4 = createButton('Filtro   3');
+  button_4.position(600, 100);
+  button_4.mousePressed(function () {
+    filterChoice = 4;
+    button_4.style("color", "#00b5e2");
+    button_2.style("color", "#000000");
+    button_3.style("color", "#000000");
     button.style("color", "#000000"); 
   });
   textureMode(NORMAL);
@@ -59,12 +72,15 @@ function draw() {
   background(220);
   switch (filterChoice) {
     case 1:
-      mask = [1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9];
-      break;
+        mask = [0, 0, 0, 0, 1, 0, 0, 0, 0];
+        break;
     case 2:
+        mask = [1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9];
+        break;  
+    case 3:
       mask = [-1, -1, -1, -1, +9, -1, -1, -1, -1];
       break;
-    case 3:
+    case 4:
       mask = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
       break;
     default:
