@@ -2,6 +2,16 @@
 
 ## Convolución en imágenes
 
+El poder de paralelización que ofrecen los núcleos de una gpu puede ser aprovechado para el cálculo de convolución de imágenes, ya que, en esencia, esta consiste en una serie de operaciones sobre pixeles que son completamente independientes una de la otra, siendo candidatos ideales para la paralelización.
+
+Para este ejemplo se implementaron máscaras de convolución de 3x3.
+
+Además de las variables varaying usadas en ejercicios anteriores, aquí se definen variables uniformes. Estas son:
+-   u_img_unit: Vector de dos posiciones que contiene las dimensiones de cada texel de la imagen original. Esta variable permitirá acceder a los texeles adyacentes al actual para poder hacer el cálculo.
+- u_mask: Corresponde a la matriz de convolución que se quiera aplicar colapsada a una sola dimensión. El usuario puede escoger entre cuatro máscaras diferentes.
+
+En el fragment shader se accede a los valores de color de los 8 texeles adyacentes de la imagen (sumado al texel actual), obteniendo 9 valores diferentes, los cuales se operan en una suma ponderada, donde los 9 pesos van indicados en el vector u_mask; y finalmente el valor resultante es asignado al fragmento correspondiente.
+
 
 > :Tabs
 > > :Tab title=Presentación

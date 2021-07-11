@@ -1,7 +1,13 @@
 # Image and video processing
 
+
+A continuación se evidencia el uso de shaders en las diferentes asignaciones que se desarrollaron anteriormente solo con las herramientas de software provistas por p5.js
+
 ## Gama de grises
 
+Mediante el canvas 3d que proporciona WEBGL se genera una figura rectangular a partir de cuatro vértices. Esta figura va a servir como "marco" para contener la imagen que se quiere mostrar. La imagen se define como una textura que se va aplicar al rectángulo.
+
+El vertex shader en este ejemplo, el cual es en escencia trivial y por lo tanto no se agrega en este informe, define la variable varying vTexCoord, de manera que el fragment shader es capaz de aprovecharla para poder acceder a las coordenadas, y posteriormente el color, de cada texel de la imagen. Es mediante este color que el fragment shader es capaz de generar la escala de grises, haciendo un promedio de los valores de cada canal rgb y asignándoselo al fragmento (pixel) correspondiente.
 
 > :Tabs
 > > :Tab title=Presentación
