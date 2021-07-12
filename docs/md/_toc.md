@@ -26,7 +26,7 @@
 >  >  >  > :Collapse label=GrayScale
 >  >  >  >
 >  >  >  > [RGB-GrayScale](/docs/workshops/imgHardwareRGBGrayScale)
->  >  >  > [Luma-GrayScale]()
+>  >  >  > [Luma-GrayScale](docs/workshops/imgHardwareLuma.md)
 >  >  >
 >  >  >  > :Collapse label=Convolution Masks
 >  >  >  >
