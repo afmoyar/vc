@@ -19,7 +19,7 @@ export const config = configuration({
   },
   page: {
     title: {
-      base: 'vc'                   // --> the base title of your doc pages
+      base: 'Computación Visual 2021-1'                   // --> the base title of your doc pages
     }
   },
   misc: {
