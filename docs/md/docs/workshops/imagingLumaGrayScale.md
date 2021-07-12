@@ -15,7 +15,9 @@ MathJax.Hub.Queue(function() {
     }
 });
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full">
+</script>
+
 # Image and video processing
 
 A pesar de que el método del promedio rgb produce una escala de grises convincente, no se apega a la manera en que el ojo humano procesa los colores, de hecho, el ojo prioriza unos colores sobre otros, por lo tanto, se busca desarrollar una escala de grises que priorice los colores de una forma similar.
