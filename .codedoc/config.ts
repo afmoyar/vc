@@ -19,12 +19,12 @@ export const config = configuration({
   },
   page: {
     title: {
-      base: 'vc'                   // --> the base title of your doc pages
+      base: 'Computación Visual 2021-1'                   // --> the base title of your doc pages
     }
   },
   misc: {
     github: {
-      user: 'lahd',           // --> name of the user on GitHub owning the repo
+      user: 'htovars',     // --> name of the user on GitHub owning the repo
       repo: 'vc',                  // --> name of the repo on GitHub
       action: 'Star',              // --> action of the GitHub button
       count: false,                // --> whether to show the `count` on the GitHub button
