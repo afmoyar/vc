@@ -24,11 +24,11 @@ Mediante el canvas 3d que proporciona WEBGL se genera una figura rectangular a p
 Al igual que el anterior metodo de RGB aqui usamos la variable varying vTexCoord  para poder acceder a las coordenadas, y posteriormente el color de cada texel de la imagen y luego poder operar sobre él haciendo un promedio ponderado en el primer de los casos con la fórmula \\[ r * 0.299 + g * 0.587 + b * 0.0114 \\] de los valores de cada canal rgb y asignándoselo al fragmento (pixel) correspondiente y luego en el LUMA normalizado usando \\[ r' * 0.299 + g' * 0.587 + b' * 0.0114 \\] dónde \\[ r' = 255 * ( \frac{r}{255}) ^ {1/2.2} \\] \\[ g' = 255 * ( \frac{g}{255}) ^ {1/2.2} \\] \\[ b' = 255 * ( \frac{b}{255}) ^ {1/2.2} \\].
 
 > :Tabs
-> > :Tab title=Luma Normalizado
+> > :Tab title=Luma Ponderado
 > > >
 > > > :P5 sketch=/docs/sketches/LumaShader/Luma_Ponderado/TextureShader.js, width=400, height=400
 > 
-> > :Tab title=Luma Ponderado
+> > :Tab title=Luma Normalizado
 > > > :P5 sketch=/docs/sketches/LumaShader/Luma_Normalizado/TextureShader.js, width=400, height=400
 > >
 
