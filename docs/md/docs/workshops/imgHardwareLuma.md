@@ -29,6 +29,7 @@ Al igual que el anterior metodo de RGB aqui usamos la variable varying vTexCoord
 > > > :P5 sketch=/docs/sketches/LumaShader/Luma_Ponderado/TextureShader.js, width=400, height=400
 > 
 > > :Tab title=Luma Normalizado
+> > >
 > > > :P5 sketch=/docs/sketches/LumaShader/Luma_Normalizado/TextureShader.js, width=400, height=400
 > >
 
